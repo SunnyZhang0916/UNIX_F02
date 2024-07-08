@@ -48,6 +48,7 @@ int main(void)
     }
     else
     {
+        //子进程循环五秒的时候，父进程在这里等五秒。五秒后，子进程结束，并且把状态存入到s里面，返回值给pid_back
         pid_back = wait(&s); //调用成功，wait 函数会返回子进程的进程 ID
 
         printf("pid_back = %d\n", pid_back);
