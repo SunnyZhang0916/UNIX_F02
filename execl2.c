@@ -10,7 +10,7 @@ execl 的参数列表是一个参数数组，它以第一个参数作为新程�
 
 int main(int argc, char *argv[])
 {
-    execl("/bin/ls", "ls" "-l", "-a", "-h", NULL);  //一旦ls代码成功，就会替代掉main里面的代码，转而去执行"ls" "-l", "-a", "-h"
+    execl("/bin/ls", "ls" "-l", "-a", "-h", NULL);  //一旦execl成功，就会替代掉main里面的代码，转而去执行"ls" "-l", "-a", "-h"
 
     printf("after execl\n");                       //因此printf不会再执行
 
